@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashraya Gyawali | Master Systems Portal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="brand">
+            <i class="fa-solid fa-code"></i> ASHRAYA.DEV // MASTER COMMAND
+        </div>
+        <div class="system-status">
+            <span class="status-indicator"></span> SYSTEM ONLINE
+        </div>
+    </header>
+
+    <main class="dashboard">
+        <!-- Hero Header -->
+        <section class="card hero">
+            <div class="hero-details">
+                <h1 id="user-fullname">Loading Profile...</h1>
+                <p id="user-title" class="title">IT Media Head | Software Engineer</p>
+                <p id="user-bio" class="bio">Connecting Python, C++, C, and Full Stack Web Frameworks.</p>
+            </div>
+        </section>
+
+        <!-- Metric Grid -->
+        <section class="metrics-grid">
+            <div class="metric-card">
+                <h3><i class="fa-solid fa-microchip"></i> CPU Utilization</h3>
+                <p id="cpu-metric" class="metric-value">0.0%</p>
+            </div>
+            <div class="metric-card">
+                <h3><i class="fa-solid fa-memory"></i> RAM Allocated</h3>
+                <p id="ram-metric" class="metric-value">0 MB</p>
+            </div>
+            <div class="metric-card">
+                <h3><i class="fa-solid fa-clock"></i> Server Uptime</h3>
+                <p id="uptime-metric" class="metric-value">0s</p>
+            </div>
+        </section>
+
+        <!-- Dynamic Accounts List -->
+        <section class="card">
+            <h2><i class="fa-solid fa-network-wired"></i> Socials & Platform Hub</h2>
+            <div id="accounts-container" class="accounts-grid">
+                <!-- Dynamically loaded via JavaScript -->
+            </div>
+        </section>
+
+        <!-- Native Binaries Terminal Interface -->
+        <section class="card terminal-section">
+            <h2><i class="fa-solid fa-terminal"></i> Native Binaries Terminal (C & C++)</h2>
+            <p>Trigger backend compiled binaries directly from the browser UI:</p>
+
+            <div class="control-panel">
+                <button onclick="executeBinary('c')" class="btn btn-c">
+                    <i class="fa-solid fa-play"></i> Run C Diagnostic (sys_check)
+                </button>
+                <button onclick="executeBinary('cpp')" class="btn btn-cpp">
+                    <i class="fa-solid fa-bolt"></i> Run C++ Engine (engine)
+                </button>
+                <button onclick="clearTerminal()" class="btn btn-clear">
+                    <i class="fa-solid fa-trash"></i> Clear Output
+                </button>
+            </div>
+
+            <pre id="terminal-screen" class="terminal">> System initialized. Waiting for binary trigger command...</pre>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
